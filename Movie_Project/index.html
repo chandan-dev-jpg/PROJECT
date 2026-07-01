@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat UI</title>
+
+    <!-- Socket.IO -->
+    <script defer src="http://localhost:8000/socket.io/socket.io.js"></script>
+<script defer src="js/client.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="logo">
+        <i class="fa-brands fa-whatsapp"></i>
+    </div>
+
+    <div class="chat-container">
+
+        <div class="message right">
+            Harry: Hey how are you?
+        </div>
+
+        <div class="message left">
+            Rohan: Bhai I am fine. How about you
+        </div>
+
+    </div>
+
+    <!-- Form -->
+    <form id="send-container" class="input-box">
+        <input
+            type="text"
+            id="messageInp"
+            placeholder="Type a message..."
+            autocomplete="off"
+            required
+        >
+
+        <button type="submit">
+            Send
+        </button>
+    </form>
+
+    
+
+</body>
+</html>
