@@ -1,0 +1,499 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    background:linear-gradient(-45deg,#1e3c72,#2a5298,#6a11cb,#2575fc);
+    background-size:400% 400%;
+    animation:bg 12s ease infinite;
+
+    color:#fff;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow-x:hidden;
+
+}
+
+/* Animated Background */
+
+@keyframes bg{
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
+
+/* Loading */
+
+#loading{
+
+position:fixed;
+
+inset:0;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+background:#000;
+
+z-index:999;
+
+}
+
+.loader{
+
+width:60px;
+
+height:60px;
+
+border-radius:50%;
+
+border:6px solid white;
+
+border-top:6px solid cyan;
+
+animation:spin 1s linear infinite;
+
+margin-top:20px;
+
+}
+
+@keyframes spin{
+
+100%{
+transform:rotate(360deg);
+}
+
+}
+
+/* Container */
+
+.container{
+
+width:1100px;
+
+max-width:95%;
+
+padding:40px;
+
+border-radius:25px;
+
+background:rgba(255,255,255,.15);
+
+backdrop-filter:blur(20px);
+
+box-shadow:0 10px 40px rgba(0,0,0,.4);
+
+}
+
+/* Header */
+
+header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-bottom:30px;
+
+}
+
+.logo{
+
+font-size:40px;
+
+font-weight:bold;
+
+}
+
+.menu button{
+
+width:50px;
+
+height:50px;
+
+border:none;
+
+margin-left:10px;
+
+border-radius:50%;
+
+cursor:pointer;
+
+font-size:20px;
+
+background:white;
+
+transition:.3s;
+
+}
+
+.menu button:hover{
+
+transform:rotate(15deg) scale(1.1);
+
+}
+
+/* Hero */
+
+.hero{
+
+text-align:center;
+
+margin-bottom:35px;
+
+}
+
+.hero h1{
+
+font-size:45px;
+
+}
+
+.hero p{
+
+margin-top:10px;
+
+font-size:18px;
+
+color:#ddd;
+
+}
+
+/* Score */
+
+.scoreBoard{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-bottom:40px;
+
+}
+
+.card{
+
+width:200px;
+
+padding:30px;
+
+text-align:center;
+
+border-radius:20px;
+
+background:rgba(255,255,255,.15);
+
+transition:.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.card h1{
+
+font-size:60px;
+
+margin-top:10px;
+
+}
+
+.center{
+
+text-align:center;
+
+}
+
+/* Choices */
+
+.choices{
+
+display:flex;
+
+justify-content:center;
+
+gap:30px;
+
+margin-bottom:40px;
+
+}
+
+.choice{
+
+width:190px;
+
+padding:25px;
+
+border:none;
+
+border-radius:20px;
+
+background:white;
+
+cursor:pointer;
+
+transition:.35s;
+
+}
+
+.choice img{
+
+width:100px;
+
+height:100px;
+
+object-fit:contain;
+
+}
+
+.choice h3{
+
+margin-top:15px;
+
+color:#222;
+
+}
+
+.choice:hover{
+
+transform:translateY(-12px) scale(1.05);
+
+box-shadow:0 20px 35px rgba(0,0,0,.4);
+
+}
+
+/* Selected */
+
+.selected{
+
+display:flex;
+
+justify-content:space-around;
+
+margin-bottom:35px;
+
+}
+
+.box{
+
+text-align:center;
+
+}
+
+.box img{
+
+width:170px;
+
+height:170px;
+
+margin-top:15px;
+
+padding:20px;
+
+background:white;
+
+border-radius:20px;
+
+}
+
+/* Result */
+
+.result{
+
+text-align:center;
+
+margin-bottom:30px;
+
+}
+
+.result h2{
+
+font-size:35px;
+
+color:#ffe600;
+
+}
+
+/* Buttons */
+
+.buttons{
+
+display:flex;
+
+justify-content:center;
+
+gap:25px;
+
+margin-bottom:25px;
+
+}
+
+.buttons button{
+
+padding:15px 35px;
+
+border:none;
+
+border-radius:15px;
+
+font-size:18px;
+
+cursor:pointer;
+
+font-weight:bold;
+
+transition:.3s;
+
+}
+
+.buttons button:hover{
+
+transform:scale(1.08);
+
+background:#00e5ff;
+
+color:white;
+
+}
+
+/* Footer */
+
+footer{
+
+text-align:center;
+
+font-size:24px;
+
+}
+
+/* Popup */
+
+.popup{
+
+position:fixed;
+
+inset:0;
+
+background:rgba(0,0,0,.7);
+
+display:none;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+.popupContent{
+
+background:white;
+
+padding:50px;
+
+border-radius:20px;
+
+text-align:center;
+
+color:#222;
+
+animation:popup .4s;
+
+}
+
+@keyframes popup{
+
+from{
+
+transform:scale(.5);
+
+opacity:0;
+
+}
+
+to{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+.scoreBoard{
+
+flex-direction:column;
+
+gap:25px;
+
+}
+
+.selected{
+
+flex-direction:column;
+
+gap:30px;
+
+}
+
+.choices{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+.logo{
+
+font-size:28px;
+
+}
+
+.hero h1{
+
+font-size:35px;
+
+}
+
+}
